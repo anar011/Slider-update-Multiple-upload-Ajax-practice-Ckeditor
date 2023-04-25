@@ -26,6 +26,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IExpertService, ExpertService>();
 
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

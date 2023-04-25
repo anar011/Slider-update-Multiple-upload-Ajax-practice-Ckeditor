@@ -13,5 +13,9 @@ namespace EntityFramework_Slider.ViewModels
 
         public IEnumerable<Blog> Blogs { get; set; }
 
+        public Experts Experts { get; set; }
+
+
+
     }
 }
