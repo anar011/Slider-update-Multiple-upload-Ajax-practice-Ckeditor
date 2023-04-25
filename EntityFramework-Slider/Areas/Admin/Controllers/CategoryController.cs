@@ -104,7 +104,7 @@ namespace EntityFramework_Slider.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> SoftDelete(int? id)
         {
             if (id is null) return BadRequest();
@@ -115,7 +115,7 @@ namespace EntityFramework_Slider.Areas.Admin.Controllers
 
             category.SoftDelete = true;
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return Ok();
 
 
         }

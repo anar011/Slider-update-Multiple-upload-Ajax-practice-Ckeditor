@@ -26,13 +26,13 @@
                 {
                     <tr>
                         <td class="py-1">
-                            @category.Name
+                            @Html.Raw(category.Name)
                         </td>
                  
                         <td>
                             <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@category.Id">Info</a>
                             <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@category.Id">Edit</a>
-                            <form style="display: inline-block" asp-action="SoftDelete" asp-route-id="@category.Id" method="post">
+                            <form style="display: inline-block" id="category-delte-form" data-id="@category.Id">
                                 <button type="submit" class="btn btn-outline-danger">Delete</button>
                             </form>
                            

@@ -17,6 +17,7 @@ namespace EntityFramework_Slider.Data
         public DbSet<Setting> Settings { get; set; }
         public DbSet<BlogHeader> BlogHeaders { get; set; }       
         public DbSet<ExpertHeader> ExpertHeaders { get; set; }
+        public DbSet<Expert> ExpertS { get; set; }
 
 
 
@@ -29,6 +30,7 @@ namespace EntityFramework_Slider.Data
             modelBuilder.Entity<BlogHeader>().HasQueryFilter(m => !m.SoftDelete);
             modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDelete);
             modelBuilder.Entity<ExpertHeader>().HasQueryFilter(m => !m.SoftDelete);
+            modelBuilder.Entity<Expert>().HasQueryFilter(m => !m.SoftDelete);
 
 
 

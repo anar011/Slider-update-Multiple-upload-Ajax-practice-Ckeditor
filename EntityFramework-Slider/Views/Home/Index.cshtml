@@ -23,8 +23,6 @@
              
             </div>
 
-        @if(Model.SliderInfo != null)
-        {
               <div class="container context pl-lg-5 ml-lg-3">
                 <div class="row">
                     <div class="col-lg-5">
@@ -38,9 +36,9 @@
                     </div>
                 </div>
             </div>
-        }
-        else
-        {
+        
+        
+     @*   
              <div class="container context pl-lg-5 ml-lg-3">
                 <div class="row">
                     <div class="col-lg-5">
@@ -50,8 +48,10 @@
                         </div>
                     </div>
                 </div>
-            </div> 
-        }
+            </div> *@
+        
+
+         
 
         </section>
 
@@ -83,7 +83,7 @@
                              @foreach (var category in Model.Categories)
                              {
 
-                                  <li><a href="" data-id="@category.Id">@category.Name</a></li>
+                                  <li><a href="" data-id="@category.Id">@Html.Raw(category.Name)</a></li>
                              }       
                             
                         </ul>

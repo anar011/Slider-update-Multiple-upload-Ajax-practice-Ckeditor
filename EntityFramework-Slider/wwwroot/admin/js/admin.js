@@ -26,4 +26,28 @@
     })
 
 
+
+
+    $(document).on("submit", "#category-delte-form", function (e) {
+        e.preventDefault();
+        let categoryId = $(this).attr("data-id");
+        let deletedElem = $(this);         //refles olmadan silinmesi ucun
+        let data = { id: categoryId }
+
+
+
+        $.ajax({
+            url: "category/softdelete",
+            type: "Post",
+            data: data,
+            success: function (res) {
+                $(deletedElem).parent().parent().remove();
+                          
+            }
+
+        })
+    })
+
+
+
 })
